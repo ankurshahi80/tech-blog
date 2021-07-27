@@ -92,6 +92,24 @@ p {
   box-shadow: 2px 2px var(--dark);
 }
 
+.btn-no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #225ca3;
+  font-size: 100%;
+  font-weight: bold;
+  transition: color .1s;
+  margin-left: 16px;
+}
+
+.btn-no-style:hover {
+  background: none;
+  color: #3486eb;
+}
+
 .hero {
   padding: 3% 4%;
   background-color: var(--dark);
@@ -110,6 +128,10 @@ p {
   display: inline-block;
   border-radius: var(--border-radius);
   box-shadow: 6px 5px var(--light-dark);
+}
+
+.no-decoration {
+  text-decoration: none;
 }
 
 .list-group {

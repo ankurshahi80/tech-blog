@@ -1,35 +1,50 @@
-<form class='login-form'>
-    <div>
-        <label for="username-login">Username:</label>
-        <input type="text" id="username-login"/>
+<form class='login-form card'>
+    <div class="card-header">
+        <header>
+           Login 
+        </header>
     </div>
-    <div>
-        <label for="password-login">Password:</label>
-        <input type="password" id="password-login"/>
+    <div class="card-body">
+        <div>
+            <label class ="form-label" for="username-login">Username:</label>
+            <input class ="form-textarea" type="text" id="username-login"/>
+        </div>
+        <div>
+            <label class ="from-label" for="password-login">Password:</label>
+            <input class ="form-textarea" type="password" id="password-login"/>
+        </div>
+        <div>
+            <button class="btn" type="submit">login</button>
+        </div>
+        <div>
+            <a href="/signup">Sign up instead</a>
+        </div>
     </div>
-    <div>
-        <button type="submit">login</button>
-    </div>
-    <div>
-        <button>Sign up instead</button>
-    </div>
+    
 </form>
 
-<form class='signup-form'>
-    <div>
-        <label for="username-signup">Username:</label>
-        <input type="text" id="username-signup"/>
+{{!-- <form class='signup-form card'> --}}
+    {{!-- <div class="card-header">
+        <header>
+           Sign Up 
+        </header>
     </div>
-    <div>
-        <label for="password-signup">Password:</label>
-        <input type="password" id="password-signup"/>
+    <div class="card-body">
+        <div>
+            <label for="username-signup">Username:</label>
+            <input class ="form-input" type="text" id="username-signup"/>
+        </div>
+        <div>
+            <label for="password-signup">Password:</label>
+            <input class ="form-input" type="password" id="password-signup"/>
+        </div>
+        <div>
+            <button class="btn" type="submit">Sign Up!</button>
+        </div>
+        <div>
+            <button>Login instead</button>
+        </div>
     </div>
-    <div>
-        <button type="submit">Sign Up!</button>
-    </div>
-    <div>
-        <button>Login instead</button>
-    </div>
-</form>
+</form> --}}
 
 <script src="/javascript/login.js"></script>
