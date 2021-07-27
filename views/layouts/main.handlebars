@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
+        <header class="hero">
             <nav>
                 {{!-- {{#if loggedIn}} --}}
                 
@@ -20,15 +20,15 @@
                 {{!-- {{/if}} --}}
                 <button id="logout" class="btn-no-style">Logout</button>
             </nav>
-            <h1>
-                <a href="/">The Tech Blog</a>
+            <h1 class = "app-title">
+                <a class="fab fa-github" href="/">The Tech Blog</a>
             </h1>
         </header>
         <main>
             {{{body}}}
         </main>
         <footer>
-            Thanks for visiting!
+            
         </footer>
     </div>
     {{#if loggedIn}}
