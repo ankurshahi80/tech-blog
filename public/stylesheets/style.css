@@ -42,6 +42,7 @@ p {
   font-size: 1.2rem;
 }
 
+
  .btn {
   font-size: 1.3rem;
   text-decoration:none;
@@ -130,7 +131,7 @@ p {
   box-shadow: 6px 5px var(--light-dark);
 }
 
-.no-decoration {
+a {
   text-decoration: none;
 }
 
