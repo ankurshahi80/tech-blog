@@ -26,15 +26,15 @@ router.get('/:id',(req,res)=> {
               model: Blog,
               attributes: ['id', 'title', 'blog_text', 'created_at']
             },
-    //         // include the Comment model here:
-    //         {
-    //             model: Comment,
-    //             attributes:['id','comment_text','created_at'],
-    //             include: {
-    //                 model: Post,
-    //                 attributes: ['title']
-    //             }
-    //         },
+            // include the Comment model here:
+            {
+                model: Comment,
+                attributes:['id','comment_text','created_at'],
+                include: {
+                    model: Blog,
+                    attributes: ['title']
+                }
+            },
     //         {
     //           model: Post,
     //           attributes: ['title'],

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Blog, User } = require('../../models');
+const { Blog, User, Comment } = require('../../models');
 
 // get all blogs
 router.get('/',(req,res) => {
@@ -29,6 +29,15 @@ router.get('/:id',(req,res) => {
         },
         attributes: ['id','blog_text','title','created_at'],
         include: [
+            // include the Comment model here:
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'blog_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
             {
                 model: User,
                 attributes: ['username']
@@ -85,8 +94,8 @@ router.put('/:id',(req,res) => {
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
-    })
-})
+    });
+});
 
 // delete a blog
 router.delete('/:id',(req,res) => {

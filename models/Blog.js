@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create out Blog model
+// create our Blog model
 class Blog extends Model{
     // static upvote(body, models){
     //     return models.Vote.create({
