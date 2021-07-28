@@ -1,0 +1,12 @@
+<article class = "card">
+    <div class ="card-header">
+        {{!-- <a href="{{post_url}}" target="_blank">{{title}}</a> --}}
+        <a>{{blog.title}}</a>
+        Posted by {{blog.user.username}} on {{blog.created_at}}
+        {{!-- <span>({{format_url post_url}})</span> --}}
+    </div>
+    <div class="card-body">
+        {{!-- {{vote_count}} {{format_plural "point" vote_count}}  --}}
+        <p>{{blog.blog_text}}</p>
+    </div>
+</article>

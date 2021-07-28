@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { response } = require('express');
 const sequelize = require('../config/connection');
 const { Blog, User, Comment,Vote } = require('../models');
 
@@ -77,7 +78,7 @@ router.get('/blog/:id',(req,res)=>{
 
         const blog = dbPostData.get({plain:true});
 
-        res.render('single-blog', {
+        res.render('comment', {
             blog,
             loggedIn: req.session.loggedIn
         });
@@ -105,5 +106,9 @@ router.get('/signup',(req,res)=>{
     
     res.render('signup');
 });
+
+router.get('/post-comment',(req,res)=> {
+    res.render('post-comment');
+})
 
 module.exports=router;

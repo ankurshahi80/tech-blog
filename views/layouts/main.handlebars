@@ -10,14 +10,13 @@
 <body>
     <div class="wrapper">
         <header class="hero">
-            <nav>
-                {{!-- {{#if loggedIn}} --}}
-                
+            <nav>    
                 <a href = "/">Home</a>
                 <a href = "/dashboard">Dashboard</a>
-                {{!-- {{else}} --}}
+                 {{#if loggedIn}}
+                 {{else}}
                 <a href="/login">Login</a>
-                {{!-- {{/if}} --}}
+                {{/if}}
                 <button id="logout" class="btn-no-style">Logout</button>
             </nav>
             <h1 class = "app-title">
