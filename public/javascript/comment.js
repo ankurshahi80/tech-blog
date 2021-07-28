@@ -19,7 +19,7 @@ async function commentFormHandler(event) {
             }
         });
         if(response.ok) {
-            document.location.replace('/post-comment')
+            document.location.reload();
         } else {
             alert(response.statusText);
         }
