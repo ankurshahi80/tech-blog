@@ -1,8 +1,8 @@
 <article class = "card">
-    <div class ="card-header">
+    <div class ="card-header justify-space-between">
         {{!-- <a href="{{post_url}}" target="_blank">{{title}}</a> --}}
-        <a class="no-decoration" href="/blog/{{id}}">{{title}}</a>
-        Posted by {{user.username}} on {{created_at}}
+        <a class="no-decoration" href="/blog/{{id}}">{{title}}</a> 
+        Posted by {{user.username}} on {{format_date created_at}}
         {{!-- <span>({{format_url post_url}})</span> --}}
     </div>
     <div class="card-body">

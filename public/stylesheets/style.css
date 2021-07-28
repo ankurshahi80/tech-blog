@@ -99,7 +99,7 @@ p {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: var(--primary);
   font-size: 100%;
   font-weight: bold;
   transition: color .1s;
@@ -133,6 +133,7 @@ p {
 
 a {
   text-decoration: none;
+  color: var(--primary);
 }
 
 .list-group {

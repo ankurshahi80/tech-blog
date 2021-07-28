@@ -77,11 +77,9 @@ router.get('/blog/:id',(req,res)=>{
         }
 
         const blog = dbPostData.get({plain:true});
-        console.log(blog);
         res.render('comment', {
             blog,
-            loggedIn: req.session.loggedIn,
-            userComment: true
+            loggedIn: req.session.loggedIn
         });
     })
     .catch(err => {
