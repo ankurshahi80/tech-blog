@@ -1,1 +1,22 @@
-Dashboard here!
+{{#if blogs.length}}
+<section>
+  <ol>
+    {{#each blogs as |blog|}}
+    <li class="list-group">
+        <article class = "card">
+            <div class ="card-header justify-space-between">
+                <a href="/dashboard/edit/{{blog.id}}"class="no-decoration" href="/blog/{{id}}">{{title}}</a> 
+                Posted by {{user.username}} on {{format_date created_at}}
+            </div>
+        </article>
+      <a href="/dashboard/edit/{{blog.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
+<section>
+    <button type="submit" class="btn-back" id="new-post-btn">+ New Post</button>
+</section>
+
+<script src="/javascript/getAddBlog.js"></script>
