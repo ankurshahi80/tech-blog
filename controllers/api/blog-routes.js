@@ -98,7 +98,7 @@ router.put('/:id',(req,res) => {
 });
 
 // delete a blog
-router.delete('/:id',(req,res) => {
+router.delete('/:id', (req,res) => {
     Blog.destroy({
         where: {
             id: id.req.params

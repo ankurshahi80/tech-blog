@@ -1,0 +1,25 @@
+<form class='addblog card'>
+    <div class="card-header">
+        <header>
+           Edit Post 
+        </header>
+    </div>
+    <div class="card-body">
+        <div>
+            <p class="form-label">Title</p>
+            <input class ="form-input-small" id="add-title" name="add-title" value="{{blog.title}}"></input>
+        </div>
+        <div>
+            <p class="form-label">Content</p>
+            <textarea class ="form-input" id="addContent" name="addContent">{{blog.blog_text}}</textarea>
+        </div>
+        <div>
+            <button id="update-btn" class="btn" type="submit">Update Post</button>
+            <button id="delete-btn" class="btn" type="submit">Delete</button>
+        </div>
+    </div>
+    
+</form>
+
+<script src='/javascript/updateBlog.js'></script>
+<script src='/javascript/delete-blog.js'></script>
