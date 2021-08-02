@@ -23,7 +23,11 @@
                 {{/if}}    
             </nav>
             <h1 class = "app-title">
-                The Tech Blog{{pagename}}
+                {{#if dashboardWindow}}
+                Your Dashboard
+                {{else}}
+                The Tech Blog
+                {{/if}}
             </h1>
         </header>
         <main>
