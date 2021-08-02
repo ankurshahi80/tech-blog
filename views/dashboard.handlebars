@@ -5,11 +5,10 @@
     <li class="list-group">
         <article class = "card">
             <div class ="card-header justify-space-between">
-                <a href="/dashboard/edit/{{blog.id}}"class="no-decoration" href="/blog/{{id}}">{{title}}</a> 
+                <a href="/dashboard/edit/{{blog.id}}"class="no-decoration">{{title}}</a> 
                 Posted by {{user.username}} on {{format_date created_at}}
             </div>
         </article>
-      <a href="/dashboard/edit/{{blog.id}}" class="edit-link">Edit post</a>
     </li>
     {{/each}}
   </ol>

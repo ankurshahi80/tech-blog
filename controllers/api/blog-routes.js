@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Blog, User, Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // get all blogs
 router.get('/',(req,res) => {
@@ -98,10 +99,10 @@ router.put('/:id',(req,res) => {
 });
 
 // delete a blog
-router.delete('/:id', (req,res) => {
+router.delete('/:id',withAuth, (req,res) => {
     Blog.destroy({
         where: {
-            id: id.req.params
+            id: req.params.id
         }
     })
     .then(dbPostData => {
@@ -109,7 +110,7 @@ router.delete('/:id', (req,res) => {
             res.status(404).json({message:'No blog found with this id.'});
             return;
         }
-        res(dbPostData);
+        res.json(dbPostData);
     })
     .catch(err => {
         console.log(err);
