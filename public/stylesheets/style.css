@@ -42,6 +42,9 @@ p {
   font-size: 1.2rem;
 }
 
+.link {
+  color: rgb(6, 69, 173);
+}
 
  .btn {
   font-size: 1.3rem;
@@ -111,7 +114,7 @@ p {
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: var(--primary);
 }
 
 .hero {

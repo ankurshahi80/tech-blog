@@ -10,17 +10,20 @@
 <body>
     <div class="wrapper">
         <header class="hero">
-            <nav>    
-                <a href = "/">Home</a>
-                <a href = "/dashboard">Dashboard</a>
+            <nav>
                 {{#if loggedIn}}
+                    <a href = "/">Home</a>
+                    <a href = "/dashboard">Dashboard</a>
+                    <button id="logout" class="btn-no-style">Logout</button>
                 {{else}}
-                <a href="/login">Login</a>
-                {{/if}}
-                <button id="logout" class="btn-no-style">Logout</button>
+                    <a href = "/">Home</a>
+                    <a href = "/dashboard">Dashboard</a>
+                    <a href="/login">Login</a>
+                    <button id="logout" class="btn-no-style">Logout</button>
+                {{/if}}    
             </nav>
             <h1 class = "app-title">
-                The Tech Blog
+                The Tech Blog{{pagename}}
             </h1>
         </header>
         <main>
