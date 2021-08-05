@@ -105,11 +105,12 @@ p {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
+  text-align: left;
   color: var(--primary);
   font-size: 100%;
-  font-weight: bold;
+  font-weight: normal;
   transition: color .1s;
-  margin-left: 16px;
+  /* margin-left: 16px; */
 }
 
 .btn-no-style:hover {
@@ -125,6 +126,11 @@ p {
 
 .hero p {
   max-width: 75%;
+}
+
+.nav-menu {
+  width: 24%;
+  display: inline-block;
 }
 
 .app-title {

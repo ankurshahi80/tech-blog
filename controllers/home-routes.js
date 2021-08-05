@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { response } = require('express');
 const sequelize = require('../config/connection');
 const { Blog, User, Comment,Vote } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/',(req,res)=>{
     console.log('===============');
@@ -10,18 +11,9 @@ router.get('/',(req,res)=>{
             'id',
             'blog_text',
             'title',
-            'created_at',
-            // [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'),'vote_count']
+            'created_at'
         ],
         include: [
-    //     //     {
-    //     //         model: Comment,
-    //     //         attributes: ['id','comment_text','post_id','user_id','created_at'],
-    //     //         include: {
-    //     //             model:User,
-    //     //             attribute: ['username']
-    //     //         }
-    //     //     },
             {
                 model: User,
                 attributes:['username']
@@ -41,7 +33,7 @@ router.get('/',(req,res)=>{
     });         
 });
 
-router.get('/blog/:id',(req,res)=>{
+router.get('/blog/:id',withAuth,(req,res)=>{
     console.log('===============');
     Blog.findOne({
         where: {

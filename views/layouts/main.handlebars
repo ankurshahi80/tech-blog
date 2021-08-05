@@ -12,14 +12,14 @@
         <header class="hero">
             <nav>
                 {{#if loggedIn}}
-                    <a href = "/">Home</a>
-                    <a href = "/dashboard">Dashboard</a>
-                    <button id="logout" class="btn-no-style">Logout</button>
+                    <a class="nav-menu" href = "/">Home</a>
+                    <a class="nav-menu" href = "/dashboard">Dashboard</a>
+                    <button id="logout" class="btn-no-style nav-menu">Logout</button>
                 {{else}}
-                    <a href = "/">Home</a>
-                    <a href = "/dashboard">Dashboard</a>
-                    <a href="/login">Login</a>
-                    <button id="logout" class="btn-no-style">Logout</button>
+                    <a class="nav-menu" href = "/">Home</a>
+                    <a class="nav-menu" href = "/dashboard">Dashboard</a>
+                    <a class="nav-menu" href="/login">Login</a>
+                    <button id="logout" class="btn-no-style nav-menu">Logout</button>
                 {{/if}}    
             </nav>
             <h1 class = "app-title">
